@@ -166,8 +166,11 @@ export { foo as default }
 declare module "foo" {
     export interface IFoo {
         theObject: any;
-        aWord: string;
-        aNumber: number;
+        aWord: string | null;
+        aNumber: number | undefined;
+    }
+    export interface PartialIFoo {
+      [K in keyof IFoo]?: IFoo[K]
     }
 }
 

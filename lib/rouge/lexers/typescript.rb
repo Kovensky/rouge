@@ -17,7 +17,7 @@ module Rouge
 
       def self.keywords
         @keywords ||= super + Set.new(%w(
-          import export from as is
+          import export from as is keyof
           namespace new static private protected public
           super async await extends implements readonly
         ))
